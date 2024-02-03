@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import NavBar from './components/NavBar'; // Importa el componente NavBar
-import ItemListContainer from './components/ItemListContainer'; // Importa el componente ItemListContainer
+import NavBar from './components/navbar/NavBar'; // Importa el componente NavBar
+import ItemListContainer from './components/navbar/ItemListContainer'; // Importa el componente ItemListContainer
 
 function App() {
   return (

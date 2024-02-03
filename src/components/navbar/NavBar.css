@@ -1,0 +1,25 @@
+/* Agrega estos estilos en tu archivo CSS o en línea según tu preferencia */
+.navbar {
+    background-color: #3498db; /* Color de fondo de la barra de navegación esto no funca*/ 
+  }
+  
+  .navbar-brand {
+    color: #051923; /* Color del texto de la marca */
+  }
+  
+  .nav-link {
+    color: #003554 !important; /* Color del texto de los enlaces */
+  }
+  
+  .nav-link:hover {
+    color: #0582CA !important; /* Color del texto de los enlaces al pasar el ratón */
+  }
+  
+  /* Estilos para el espacio equitativo */
+  .navbar-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Agrega más estilos según tus preferencias */
+  

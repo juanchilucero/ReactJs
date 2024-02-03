@@ -1,5 +1,7 @@
+// NavBar.jsx
 import React from 'react';
 import CartWidget from './CartWidget';
+import './NavBar.css'; // Importa el archivo de estilos
 
 const NavBar = () => {
   return (
@@ -18,10 +20,7 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link" href="#!">Inicio</a>
-            </li>
+          <ul className="navbar-nav justify-content-center">
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -31,21 +30,17 @@ const NavBar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Categorías
+                Productos
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#!">Categoría 1</a></li>
-                <li><a className="dropdown-item" href="#!">Categoría 2</a></li>
+                <li><a className="dropdown-item" href="#!">Audio</a></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#!">Ver todas las categorías</a></li>
+                <li><a className="dropdown-item" href="#!">Video</a></li>
               </ul>
-            </li>
-            {/* ... Otros elementos del menú */}
-            <li className="nav-item">
-              <CartWidget />
             </li>
           </ul>
         </div>
+        <CartWidget />
       </div>
     </nav>
   );
