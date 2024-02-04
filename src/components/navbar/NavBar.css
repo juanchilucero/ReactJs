@@ -1,6 +1,7 @@
 /* Agrega estos estilos en tu archivo CSS o en línea según tu preferencia */
-.navbar {
-    background-color: #3498db; /* Color de fondo de la barra de navegación esto no funca*/ 
+.navbar-custom {
+    background-color: #3498db; /* Cambia esto al color que desees */
+    /* Otros estilos personalizados según tus preferencias */
   }
   
   .navbar-brand {

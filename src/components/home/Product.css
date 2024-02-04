@@ -1,0 +1,23 @@
+/* ProductDetail.css */
+
+.product-container {
+    width: 300px; /* Tamaño fijo del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc; /* Borde opcional para separar los elementos */
+    margin: 10px; /* Espaciado entre los contenedores */
+  }
+  
+  .product-container img {
+    width: 100%; /* La imagen se ajusta al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+  }
+  
+  /* Estilos adicionales para el contenedor principal que organiza los elementos en una fila */
+  .product-list-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no haya suficiente espacio */
+    justify-content: space-around; /* Distribuye los elementos alrededor del espacio disponible */
+  }
+  
