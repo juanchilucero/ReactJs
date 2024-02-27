@@ -19,8 +19,12 @@
   /* Estilos para el espacio equitativo */
   .navbar-nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    
   }
   
+  .navbar-nav li{
+    margin: 0 25px;
+  }
   /* Agrega más estilos según tus preferencias */
   

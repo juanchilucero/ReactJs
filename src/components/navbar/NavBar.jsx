@@ -21,24 +21,9 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav justify-content-center">
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-Link dropdown-toggle"
-                to="../home/products"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Productos
-              </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><Link className="dropdown-item" to="../home/products">Audio</Link></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><Link className="dropdown-item" to="../home/products">Video</Link></li>
-              </ul>
-            </li>
+          <ul className="navbar-nav">
+                <li><Link className="dropdown-item" to="../home/products/audio">Audio</Link></li>
+                <li><Link className="dropdown-item" to="../home/products/video">Video</Link></li>
           </ul>
         </div>
         <CartWidget />

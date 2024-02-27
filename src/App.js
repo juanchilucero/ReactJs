@@ -23,13 +23,9 @@ function App() {
 
           <Route path='/' element={ <Products/>}/>
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/home/products/:categoryId" element={<Products />} />
 
           </Routes>
-
-
-
-
-
         </Router>
 
       </div>

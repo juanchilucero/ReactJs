@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Product.css'; // Archivo CSS para estilos
+import ItemCount from '../itemCount/ItemCount';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,9 +42,13 @@ const ProductDetail = () => {
       </div>
       <p>id: {product.id}</p>
       <p>Precio: {product.precio}</p>
+      <ItemCount stock={product.stock} initial={1} onAdd={(quantity) => console.log(quantity)} />
       {/* Agrega más detalles según la estructura de tu objeto de producto */}
+
+
     </div>
   );
 };
 
 export default ProductDetail;
+
