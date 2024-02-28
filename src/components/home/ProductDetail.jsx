@@ -1,11 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './Product.css'; // Archivo CSS para estilos
 import ItemCount from '../itemCount/ItemCount';
+import { CartContext } from '../../context/CartContext';
+
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [quantityAdded, setQuantityAdded] = useState(0);
+  const { addItem } = useContext(CartContext);
+
+  const handleOnAdd = (quantity) =>{
+    setQuantityAdded(quantity);
+
+    addItem(product, quantity);
+  };
+
 
 
   useEffect(() => {
@@ -42,9 +53,20 @@ const ProductDetail = () => {
       </div>
       <p>id: {product.id}</p>
       <p>Precio: {product.precio}</p>
-      <ItemCount stock={product.stock} initial={1} onAdd={(quantity) => console.log(quantity)} />
       {/* Agrega más detalles según la estructura de tu objeto de producto */}
+      <div>
+        {
+          quantityAdded > 0 ? (
+            <div>
+            <Link to="/cart" className='option'>Terminar Compra</Link>
+            <Link to="/" className='option'>Seguir Comprando</Link>
+            </div>
 
+          ) : (
+            <ItemCount stock={product.stock} initial={1} onAdd={handleOnAdd} />
+          )
+        }
+      </div>
 
     </div>
   );

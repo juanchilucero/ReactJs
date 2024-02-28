@@ -10,22 +10,26 @@ import Products from './components/home/Products';
 import ProductDetail from './components/home/ProductDetail';  // Asegúrate de tener este import
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { CartProvider } from './context/CartContext';
+
 function App() {
   return (
     
       <div className="App">
 
         <Router>
-        <NavBar />
-        <ItemListContainer greeting="¡Hola! Bienvenido a la tienda." />
+          <CartProvider>
+            <NavBar />
+            <ItemListContainer greeting="¡Hola! Bienvenido a la tienda." />
 
-          <Routes>
+            <Routes>
 
-          <Route path='/' element={ <Products/>}/>
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/home/products/:categoryId" element={<Products />} />
+              <Route path='/' element={ <Products/>}/>
+              <Route path="/product/:id" element={<ProductDetail />} />
+              <Route path="/home/products/:categoryId" element={<Products />} />
 
-          </Routes>
+            </Routes>
+          </CartProvider>
         </Router>
 
       </div>
