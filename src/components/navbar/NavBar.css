@@ -28,3 +28,19 @@
   }
   /* Agrega más estilos según tus preferencias */
   
+  .cart-widget {
+    position: relative; /* Para posicionar el badge relativo a este contenedor */
+  }
+  
+  .cart-icon {
+    width: 30px; /* Ajusta el ancho según el tamaño deseado de la imagen */
+    height: auto; /* Para mantener la proporción de la imagen */
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px; /* Ajusta la posición verticalmente según tus necesidades */
+    right: -5px; /* Ajusta la posición horizontalmente según tus necesidades */
+    font-size: 12px;
+  }
+  

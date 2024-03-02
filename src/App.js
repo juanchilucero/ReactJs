@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Cart/Checkout';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/home/products/:categoryId" element={<Products />} />
               <Route path='/cart' element={ <Cart/>}/>
+              <Route path='/checkout' element={ <Checkout/>}/>
 
             </Routes>
           </CartProvider>
