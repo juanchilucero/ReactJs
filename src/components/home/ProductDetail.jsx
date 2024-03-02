@@ -47,12 +47,14 @@ const ProductDetail = () => {
   return (
     <div>
       <h1>{product.nombre}</h1>
+
+      <div className='product-list-container'>
       <div className='product-container'>
         <img src={require(`../../imgs/${product.url}`)} alt={product.nombre} />
       </div>
+      <div className='detailsContainer'>
       <p>id: {product.id}</p>
       <p>Precio: {product.precio}</p>
-      {/* Agrega más detalles según la estructura de tu objeto de producto */}
       <div>
         {quantityAdded > 0 ? (
           <div>
@@ -63,6 +65,10 @@ const ProductDetail = () => {
           <ItemCount stock={product.stock} initial={1} onAdd={handleOnAdd} />
         )}
       </div>
+      </div>
+      </div>
+
+
     </div>
   );
 };

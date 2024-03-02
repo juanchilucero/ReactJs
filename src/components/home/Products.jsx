@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './Product.css'; // Archivo CSS para estilos
+import ItemListContainer from '../../components/navbar/ItemListContainer';
 import { getFirestore, collection, query, where, getDocs, limit } from 'firebase/firestore';
 
 const Products = () => {
@@ -40,6 +41,7 @@ const Products = () => {
 
   return (
     <div>
+      <ItemListContainer greeting="¡Hola! Bienvenido a la tienda." />
       <h1>Productos</h1>
       <div className='product-list-container'>
         {products.map(product => (

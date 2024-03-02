@@ -21,3 +21,23 @@
     justify-content: space-around; /* Distribuye los elementos alrededor del espacio disponible */
   }
   
+  .detailsContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+  }
+
+  .option {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #140303;
+    border-radius: 5px;
+    background-color: #00c9fc86;
+  }
+  
+  .option:hover {
+    background-color: #3bd41c8f;
+  }
+  

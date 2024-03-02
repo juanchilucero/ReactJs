@@ -1,0 +1,12 @@
+.Counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.Controls{
+    display: flex;
+    justify-content: space-around;
+}

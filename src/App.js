@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import React from 'react';
 import NavBar from './components/navbar/NavBar';
-import ItemListContainer from './components/navbar/ItemListContainer';
+
 import Products from './components/home/Products';
 import ProductDetail from './components/home/ProductDetail';  // Asegúrate de tener este import
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -21,7 +21,6 @@ function App() {
         <Router>
           <CartProvider>
             <NavBar />
-            <ItemListContainer greeting="¡Hola! Bienvenido a la tienda." />
 
             <Routes>
 

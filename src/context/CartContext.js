@@ -1,26 +1,25 @@
 import React, { createContext, useState } from "react";
 
 export const CartContext = createContext({
-    cart: []
-})
+    cart: [],
+    addItem: () => {},
+    removeItem: () => {},
+    clearCart: () => {},
+    getTotalPrice: () => 0
+});
 
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
-    console.log(cart)
-
     const addItem = (item, quantity) =>{
-        // Comprobamos si el producto ya está en el carrito
         const existingItemIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
 
         if (existingItemIndex !== -1) {
-            // Si el producto ya está en el carrito, actualizamos su cantidad
             const updatedCart = [...cart];
             updatedCart[existingItemIndex].quantity += quantity;
             setCart(updatedCart);
         } else {
-            // Si el producto no está en el carrito, lo agregamos con los detalles requeridos
             setCart(prev => [...prev, { id: item.id, name: item.nombre, price: item.precio, quantity }]);
         }
     }
@@ -34,9 +33,12 @@ export const CartProvider = ({ children }) => {
         setCart([])
     }
 
+    const getTotalPrice = () => {
+        return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    }
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clearCart}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clearCart, getTotalPrice}}>
             {children}
         </CartContext.Provider>
     )
